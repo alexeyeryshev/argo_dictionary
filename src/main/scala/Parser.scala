@@ -9,7 +9,9 @@ import org.htmlcleaner.HtmlCleaner
 
 import scala.collection.mutable.ListBuffer
 
-trait Parser {
+import play.api.mvc._
+
+trait argoParser {
   def getHeadlinesFromUrl(url: String): List[String] = {
     var stories = new ListBuffer[String]
     val cleaner = new HtmlCleaner
